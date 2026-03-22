@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASHISH.JALAN // UNITY DEV</title>
+    <meta name="description"
+        content="Portfolio of Ashish Jalan — Unity Game Developer. 4+ years shipping mobile, PC & WebGL games.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BOOT SCREEN -->
+    <div id="boot-screen">
+        <div class="boot-content">
+            <div class="boot-logo">AJ<span>_</span></div>
+            <div class="boot-bar-wrap">
+                <div class="boot-bar" id="boot-bar"></div>
+            </div>
+            <div class="boot-text" id="boot-text">INITIALIZING SYSTEM...</div>
+        </div>
+    </div>
+
+    <!-- SCANLINES OVERLAY -->
+    <div class="scanlines"></div>
+    <!-- HEX GRID BACKGROUND -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-trail" id="cursor-trail"></div>
+
+    <!-- NAVBAR / HUD -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-left">
+            <div class="hud-logo">AJ<span class="blink">_</span></div>
+            <div class="hud-status"><span class="dot green"></span>ONLINE</div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home"><span class="nav-num">01</span>HOME</a></li>
+            <li><a href="#skills"><span class="nav-num">02</span>SKILLS</a></li>
+            <li><a href="#experience"><span class="nav-num">03</span>EXP</a></li>
+            <li><a href="#projects"><span class="nav-num">04</span>PROJECTS</a></li>
+            <li><a href="#education"><span class="nav-num">05</span>EDU</a></li>
+            <li><a href="#contact" class="nav-cta">[ CONTACT ]</a></li>
+        </ul>
+        <div class="hud-right">
+            <span class="hud-sys">SYS:OK</span>
+        </div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-inner">
+            <div class="hero-top-label">&gt; PLAYER PROFILE LOADED_</div>
+            <h1 class="hero-name" id="hero-name"></h1>
+            <div class="hero-role">
+                <span class="role-bracket">[</span>
+                <span id="role-text"></span><span class="blink">|</span>
+                <span class="role-bracket">]</span>
+            </div>
+            <p class="hero-desc">4+ years crafting immersive mobile, browser & PC games. Multiplayer shooters,
+                blockchain arcades, puzzle runners — I build worlds players return to.</p>
+
+            <div class="hero-stats-hud">
+                <div class="stat-hud">
+                    <div class="stat-hud-val neon-green">4+</div>
+                    <div class="stat-hud-label">YRS EXP</div>
+                </div>
+                <div class="stat-sep">///</div>
+                <div class="stat-hud">
+                    <div class="stat-hud-val neon-pink">4</div>
+                    <div class="stat-hud-label">STUDIOS</div>
+                </div>
+                <div class="stat-sep">///</div>
+                <div class="stat-hud">
+                    <div class="stat-hud-val neon-blue">12+</div>
+                    <div class="stat-hud-label">GAMES</div>
+                </div>
+            </div>
+
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary" id="btn-view">▶ VIEW PROJECTS</a>
+                <a href="#contact" class="btn btn-secondary" id="btn-contact">⬡ GET IN TOUCH</a>
+            </div>
+        </div>
+        <div class="hero-decor">
+            <div class="decor-ring ring1"></div>
+            <div class="decor-ring ring2"></div>
+            <div class="decor-ring ring3"></div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <div class="section-inner">
+            <div class="section-label">// CAPABILITY_MATRIX</div>
+            <h2 class="section-title reveal">TECHNICAL <span class="neon-blue">SKILLS</span></h2>
+            <div class="skills-grid">
+
+                <div class="skill-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="skill-card-top">
+                        <span class="skill-label">GAME ARCHITECTURE</span>
+                        <span class="skill-lv neon-green">LV.MAX</span>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="sbar-row"><span>Singleton</span>
+                            <div class="sbar">
+                                <div class="sbar-fill" style="--w:95%"></div>
+                            </div>
+                        </div>
+                        <div class="sbar-row"><span>Object Pooling</span>
+                            <div class="sbar">
+                                <div class="sbar-fill" style="--w:90%"></div>
+                            </div>
+                        </div>
+                        <div class="sbar-row"><span>Observer</span>
+                            <div class="sbar">
+                                <div class="sbar-fill" style="--w:90%"></div>
+                            </div>
+                        </div>
+                        <div class="sbar-row"><span>Strategy</span>
+                            <div class="sbar">
+                                <div class="sbar-fill" style="--w:80%"></div>
+                            </div>
+                        </div>
+                        <div class="sbar-row"><span>Command</span>
+                            <div class="sbar">
+                                <div class="sbar-fill" style="--w:80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="skill-card-top">
+                        <span class="skill-label">DEV TOOLS</span>
+                        <span class="skill-lv neon-blue">LV.10</span>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="sbar-row"><span>Unity 2D & 3D</span>
+                            <div class="sbar">
+                                <div class="sbar-fill" style="--w:98%; --c:var(--neon-blue)"></div>
+                            </div>
+                        </div>
+                        <div class="sbar-row"><span>Git</span>
+                            <div class="sbar">
+                                <div class="sbar-fill" style="--w:85%; --c:var(--neon-blue)"></div>
+                            </div>
+                        </div>
+                        <div class="sbar-row"><span>Babylon.js</span>
+                            <div class="sbar">
+                                <div class="sbar-fill" style="--w:65%; --c:var(--neon-blue)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="skill-card-top">
+                        <span class="skill-label">PROGRAMMING</span>
+                        <span class="skill-lv neon-pink">LV.10</span>
+                    </div>
+                    <div class="skill-bars">
+                        <div class="sbar-row"><span>C#</span>
+                            <div class="sbar">
+                                <div class="sbar-fill" style="--w:98%; --c:var(--neon-pink)"></div>
+                            </div>
+                        </div>
+                        <div class="sbar-row"><span>C</span>
+                            <div class="sbar">
+                                <div class="sbar-fill" style="--w:70%; --c:var(--neon-pink)"></div>
+                            </div>
+                        </div>
+                        <div class="sbar-row"><span>Java</span>
+                            <div class="sbar">
+                                <div class="sbar-fill" style="--w:65%; --c:var(--neon-pink)"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="skill-card-top">
+                        <span class="skill-label">PLATFORMS</span>
+                        <span class="skill-lv neon-purple">MULTI</span>
+                    </div>
+                    <div class="platform-icons">
+                        <div class="plat-item">📱 Android</div>
+                        <div class="plat-item">🍎 iOS</div>
+                        <div class="plat-item">🌐 WebGL</div>
+                        <div class="plat-item">🖥️ Windows</div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="skill-card-top">
+                        <span class="skill-label">INTEGRATIONS</span>
+                        <span class="skill-lv neon-green">UNLOCKED</span>
+                    </div>
+                    <div class="platform-icons">
+                        <div class="plat-item">🔗 Photon PUN 2</div>
+                        <div class="plat-item">💳 IAP / Battle Pass</div>
+                        <div class="plat-item">📊 Google Ads</div>
+                        <div class="plat-item">⛓️ Blockchain</div>
+                        <div class="plat-item">🔌 REST APIs</div>
+                    </div>
+                </div>
+
+                <div class="skill-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="skill-card-top">
+                        <span class="skill-label">DESIGN</span>
+                        <span class="skill-lv neon-purple">LV.7</span>
+                    </div>
+                    <div class="platform-icons">
+                        <div class="plat-item">🎨 Photoshop</div>
+                        <div class="plat-item">🗿 Maya</div>
+                        <div class="plat-item">🖌️ Substance Painter</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section-dark" id="experience">
+        <div class="section-inner">
+            <div class="section-label">// QUEST_LOG</div>
+            <h2 class="section-title reveal">WORK <span class="neon-pink">EXPERIENCE</span></h2>
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="tl-connector"></div>
+                    <div class="tl-node">
+                        <div class="tl-node-dot"></div>
+                        <div class="tl-node-ring"></div>
+                        <div class="tl-node-label neon-green">CURRENT</div>
+                    </div>
+                    <div class="tl-card cbox">
+                        <div class="cbox-corners"></div>
+                        <div class="tl-header">
+                            <div>
+                                <div class="tl-role">Unity Game Programmer</div>
+                                <div class="tl-company">Exosphere Interactive <span>// Mumbai</span></div>
+                            </div>
+                            <div class="tl-date">NOV '25 → PRESENT</div>
+                        </div>
+                        <ul class="tl-list">
+                            <li>Google & Apple auth — secure cross-platform account persistence.</li>
+                            <li>In-App Purchases, Subscriptions & Battle Pass systems.</li>
+                            <li>Integrated Rewarded & Interstitial Google Ads on Android/iOS.</li>
+                            <li>Cloud player progression via REST API integrations.</li>
+                            <li>Full Android & iOS store publishing pipeline management.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="tl-connector"></div>
+                    <div class="tl-node">
+                        <div class="tl-node-dot"></div>
+                        <div class="tl-node-ring"></div>
+                    </div>
+                    <div class="tl-card cbox">
+                        <div class="cbox-corners"></div>
+                        <div class="tl-header">
+                            <div>
+                                <div class="tl-role">Unity Game Developer</div>
+                                <div class="tl-company">Virtualize Technologies <span>// Mohali</span></div>
+                            </div>
+                            <div class="tl-date">SEP '24 → JUN '25</div>
+                        </div>
+                        <ul class="tl-list">
+                            <li>Shipped games for WebGL, Windows, Android & iOS.</li>
+                            <li>Unity Services + Google Ads integrations.</li>
+                            <li>IAP systems with product validation & purchase recovery.</li>
+                            <li>Custom Level Editor tool — reduced design time by ~40%.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="tl-connector"></div>
+                    <div class="tl-node">
+                        <div class="tl-node-dot"></div>
+                        <div class="tl-node-ring"></div>
+                    </div>
+                    <div class="tl-card cbox">
+                        <div class="cbox-corners"></div>
+                        <div class="tl-header">
+                            <div>
+                                <div class="tl-role">Unity Game Developer</div>
+                                <div class="tl-company">BooBoo Games <span>// Ahmedabad</span></div>
+                            </div>
+                            <div class="tl-date">DEC '22 → AUG '24</div>
+                        </div>
+                        <ul class="tl-list">
+                            <li>Android game development with heavy mobile optimization focus.</li>
+                            <li>Textures, meshes, lighting, post-processing & audio pipelines.</li>
+                            <li>Multiplayer with Photon PUN 2 for real-time interactions.</li>
+                            <li>Analytics integration for data-driven engagement improvements.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="tl-node">
+                        <div class="tl-node-dot"></div>
+                        <div class="tl-node-ring"></div>
+                    </div>
+                    <div class="tl-card cbox">
+                        <div class="cbox-corners"></div>
+                        <div class="tl-header">
+                            <div>
+                                <div class="tl-role">Unity Game Developer</div>
+                                <div class="tl-company">Abhiwan Technology <span>// New Delhi</span></div>
+                            </div>
+                            <div class="tl-date">DEC '21 → OCT '22</div>
+                        </div>
+                        <ul class="tl-list">
+                            <li>Cross-platform Unity games for WebGL, Windows & Android.</li>
+                            <li>REST API integrations for auth, data exchange & sync.</li>
+                            <li>Immersive gameplay via animations, lighting & assets.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <div class="section-inner">
+            <div class="section-label">// PROJECT_DATABASE</div>
+            <h2 class="section-title reveal">FEATURED <span class="neon-blue">PROJECTS</span></h2>
+            <div class="projects-grid">
+
+                <div class="proj-card reveal cbox" data-tags="Unity 3D · C#">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">🎓</div>
+                        <a href="https://play.google.com/store/apps/details?id=com.funcell.graduationsaga&hl=en"
+                            target="_blank" class="proj-badge">▶ PLAY</a>
+                    </div>
+                    <h3 class="proj-title">Graduation Saga</h3>
+                    <p class="proj-desc">Campus life simulator blending strategy & puzzle mechanics. Players guide
+                        students through academic and social challenges.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 3D</span><span class="proj-tag">C#</span>
+                    </div>
+                </div>
+
+                <div class="proj-card reveal cbox" data-tags="Unity 2D · Photon PUN 2 · API">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">🧱</div>
+                    </div>
+                    <h3 class="proj-title">Tetris — Multiplayer</h3>
+                    <p class="proj-desc">Modern Tetris with single & multiplayer modes. WGC token coin-betting system
+                        with Photon real-time game sessions.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 2D</span><span class="proj-tag">C#</span><span
+                            class="proj-tag">Photon PUN 2</span></div>
+                </div>
+
+                <div class="proj-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">🛍️</div>
+                        <a href="https://play.google.com/store/apps/details?id=com.funcell.mallhunt&hl=en"
+                            target="_blank" class="proj-badge">▶ PLAY</a>
+                    </div>
+                    <h3 class="proj-title">Mall Hunt</h3>
+                    <p class="proj-desc">3D casual scavenger hunt — players collect virtual items in mall environments
+                        to earn in-game rewards.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 3D</span><span class="proj-tag">C#</span>
+                    </div>
+                </div>
+
+                <div class="proj-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">🏰</div>
+                    </div>
+                    <h3 class="proj-title">Howling Castle</h3>
+                    <p class="proj-desc">Level-based 2D platformer with blockchain login. NFT collectible assets and
+                        decentralized player profile security.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 2D</span><span class="proj-tag">C#</span><span
+                            class="proj-tag">Blockchain</span></div>
+                </div>
+
+                <div class="proj-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">🔤</div>
+                    </div>
+                    <h3 class="proj-title">Word Wanderer</h3>
+                    <p class="proj-desc">Word-finding puzzle with real-world location-based level design. Spline paths
+                        for dynamic letter arrangement.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 2D</span><span class="proj-tag">C#</span><span
+                            class="proj-tag">Spline</span></div>
+                </div>
+
+                <div class="proj-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">🔫</div>
+                    </div>
+                    <h3 class="proj-title">Happy Boys Arcade</h3>
+                    <p class="proj-desc">Multiplayer blockchain shooter with NFT gameplay, real-time competitive
+                        sessions & secure wallet interactions.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 3D</span><span class="proj-tag">Photon PUN
+                            2</span><span class="proj-tag">NFT</span></div>
+                </div>
+
+                <div class="proj-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">⭐</div>
+                    </div>
+                    <h3 class="proj-title">Star Jump</h3>
+                    <p class="proj-desc">Interactive video-based narrative game with player choices affecting storyline.
+                        Branch Mode for multi-perspective exploration.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 2D</span><span class="proj-tag">AV Pro
+                            Video</span></div>
+                </div>
+
+                <div class="proj-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">🚌</div>
+                        <a href="https://drive.google.com/file/d/15ucXwIxFiAGv93jvFazx0bvkQjtJO5Tv/view?usp=drive_link"
+                            target="_blank" class="proj-badge">▶ DEMO</a>
+                    </div>
+                    <h3 class="proj-title">Passenger Go</h3>
+                    <p class="proj-desc">Casual mobile puzzle — match passengers to buses by colour. Progressive
+                        difficulty with mobile-optimized levels.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 3D</span><span class="proj-tag">C#</span>
+                    </div>
+                </div>
+
+                <div class="proj-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">💎</div>
+                        <a href="https://drive.google.com/file/d/1Q_ZhAWFS6YVmPXajx2rpx0IhYGLuP8F-/view?usp=sharing"
+                            target="_blank" class="proj-badge">▶ DEMO</a>
+                    </div>
+                    <h3 class="proj-title">Diamond Rush</h3>
+                    <p class="proj-desc">Fast-paced 2D arcade — defend diamonds from enemies. Features a time-rewind
+                        mechanic to correct mistakes.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 2D</span><span class="proj-tag">C#</span>
+                    </div>
+                </div>
+
+                <div class="proj-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">🗣️</div>
+                        <a href="https://play.google.com/store/apps/details?id=com.Speech.Speechlady&hl=en"
+                            target="_blank" class="proj-badge">▶ PLAY</a>
+                    </div>
+                    <h3 class="proj-title">Speech Phonology</h3>
+                    <p class="proj-desc">Educational game for children learning phonics through interactive mini-games
+                        tailored for speech development.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 3D</span><span class="proj-tag">C#</span>
+                    </div>
+                </div>
+
+                <div class="proj-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">🏃</div>
+                    </div>
+                    <h3 class="proj-title">Parkour Run Race</h3>
+                    <p class="proj-desc">Competitive 3D running game with AI bot integration. Diverse level challenges
+                        for enhanced replayability.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 3D</span><span class="proj-tag">C#</span><span
+                            class="proj-tag">AI</span></div>
+                </div>
+
+                <div class="proj-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="proj-top">
+                        <div class="proj-icon">🫧</div>
+                        <a href="https://play.google.com/store/apps/details?id=com.KidsCare.BubbleShooter&hl=en"
+                            target="_blank" class="proj-badge">▶ PLAY</a>
+                    </div>
+                    <h3 class="proj-title">Bubble Shooter Infinity</h3>
+                    <p class="proj-desc">Vibrant 2D bubble shooter with stage-specific objectives and boosters. Scalable
+                        logic across dozens of unique patterns.</p>
+                    <div class="proj-footer"><span class="proj-tag">Unity 2D</span><span class="proj-tag">C#</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section section-dark" id="education">
+        <div class="section-inner">
+            <div class="section-label">// PLAYER_HISTORY</div>
+            <h2 class="section-title reveal">EDUCATION <span class="neon-purple">UNLOCKED</span></h2>
+            <div class="edu-grid">
+                <div class="edu-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="edu-badge neon-green">MASTERS</div>
+                    <div class="edu-icon-big">🎮</div>
+                    <h3>Game Design & Development</h3>
+                    <h4>Asian School of Film and Television</h4>
+                    <p>Noida, UP &nbsp;·&nbsp; 2019–2021 &nbsp;·&nbsp; GPA 7.5</p>
+                </div>
+                <div class="edu-card reveal cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="edu-badge neon-blue">BACHELOR</div>
+                    <div class="edu-icon-big">💻</div>
+                    <h3>Computer Applications (BCA)</h3>
+                    <h4>ICFAI University</h4>
+                    <p>Ranchi, JH &nbsp;·&nbsp; 2016–2019 &nbsp;·&nbsp; GPA 7.5</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <footer class="footer" id="contact">
+        <div class="footer-inner">
+            <div class="section-label">// ESTABLISH_CONNECTION</div>
+            <h2 class="section-title reveal">LET'S <span class="neon-green">CONNECT</span></h2>
+            <p class="footer-sub reveal">Open to new missions, collabs & creative challenges.</p>
+            <div class="contact-grid reveal">
+                <a href="mailto:ashishjalan9470@gmail.com" class="contact-card cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-label">EMAIL</div>
+                    <div class="contact-val">ashishjalan9470@gmail.com</div>
+                </a>
+                <a href="https://www.linkedin.com/in/ashish-jalan-b975a2216" target="_blank" class="contact-card cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="contact-icon">💼</div>
+                    <div class="contact-label">LINKEDIN</div>
+                    <div class="contact-val">ashish-jalan-b975a2216</div>
+                </a>
+                <a href="https://github.com/ash9470" target="_blank" class="contact-card cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="contact-icon">🐙</div>
+                    <div class="contact-label">GITHUB</div>
+                    <div class="contact-val">github.com/ash9470</div>
+                </a>
+                <a href="tel:09905072945" class="contact-card cbox">
+                    <div class="cbox-corners"></div>
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-label">PHONE</div>
+                    <div class="contact-val">+91 9905072945</div>
+                </a>
+            </div>
+            <div class="footer-bottom">
+                <span class="neon-green">ASHISH.JALAN</span> // UNITY GAME DEVELOPER // MUMBAI // 2026
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
